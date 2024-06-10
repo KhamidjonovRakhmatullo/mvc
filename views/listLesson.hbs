@@ -1,0 +1,31 @@
+<main style="padding: 0px 40px">
+  <h1>List of Lessons: </h1>
+  <div style="display: grid; grid-template-areas: 'a a a'; gap:20px;">
+    {{#if dataLesson}}
+      {{#each dataLesson}}
+        <div class="card">
+          <div
+            style="background-color: #f2f2f2; padding: 20px; text-align: center;"
+          >
+            <img
+              src="https://st2.depositphotos.com/15813590/44493/v/450/depositphotos_444936874-stock-illustration-open-book-icon-isolated-white.jpg"
+              alt="Avatar"
+              style="width: 100px; border-radius: 50%;"
+            />
+            <div style="margin-top: 10px;">
+              <h4 style="margin: 0; color: #333;"><b>Lesson name: {{dars}}</b></h4>
+              <p style="margin: 5px 0; color: #666;">Date: {{vaqt}}</p>
+              <a
+                href="/{{uid}}"
+                style="text-decoration: none; background-color: #4CAF50; color: white; padding: 7px 20px; border-radius: 5px;"
+              >More info...</a>
+            </div>
+          </div>
+        </div>
+
+      {{/each}}
+    {{else}}
+      <p>No Lesson</p>
+    {{/if}}
+  </div>
+</main>
